@@ -1,10 +1,7 @@
-import { Button } from "@/components/ui/button";
-
 export default function Home() {
   return (
-    <main>
+    <h1>
       Home
-      <Button variant="outline">Корзина</Button>
-    </main>
+    </h1>
   );
 }
