@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/header";
+import { Header } from "@/components/shared";
 
 const noto_sans = Noto_Sans({
   subsets: ["cyrillic"],
