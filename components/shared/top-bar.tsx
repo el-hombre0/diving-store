@@ -8,7 +8,7 @@ interface TopBarProps {
   className?: string;
 }
 
-export const Topbar: React.FC<TopBarProps> = ({ className }) => {
+export const TopBar: React.FC<TopBarProps> = ({ className }) => {
   return (
     <div
       className={cn(
