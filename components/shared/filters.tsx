@@ -12,28 +12,34 @@ interface FiltersProps {
 }
 
 const checkboxFiltersItems: FilterCheckboxProps[] = [
-  { text: "Ласты", value: "0" },
-  { text: "Маски", value: "1" },
-  { text: "Трубки", value: "2" },
-  { text: "BCD", value: "3" },
-  { text: "Боты", value: "4" },
-  { text: "Комплекты", value: "5" },
-  { text: "Перчатки", value: "6" },
-  { text: "Гидрокостюмы", value: "7" },
-  { text: "Сухари", value: "8" },
-  { text: "Регуляторы", value: "9" },
-  { text: "Баллоны", value: "10" },
+  { id: 1, text: "Ласты", value: "0" },
+  { id: 2, text: "Маски", value: "1" },
+  { id: 3, text: "Трубки", value: "2" },
+  { id: 4, text: "BCD", value: "3" },
+  { id: 5, text: "Боты", value: "4" },
+  { id: 6, text: "Комплекты", value: "5" },
+  { id: 7, text: "Перчатки", value: "6" },
+  { id: 8, text: "Гидрокостюмы", value: "7" },
+  { id: 9, text: "Сухари", value: "8" },
+  { id: 10, text: "Регуляторы", value: "9" },
+  { id: 11, text: "Баллоны", value: "10" },
 ];
 const checkboxFiltersDefaultItems: FilterCheckboxProps[] = [
-  { text: "Ласты", value: "0" },
-  { text: "Маски", value: "1" },
-  { text: "Трубки", value: "2" },
-  { text: "BCD", value: "3" },
-  { text: "Боты", value: "4" },
-  { text: "Комплекты", value: "5" },
+  { id: 1, text: "Ласты", value: "0" },
+  { id: 2, text: "Маски", value: "1" },
+  { id: 3, text: "Трубки", value: "2" },
+  { id: 4, text: "BCD", value: "3" },
+  { id: 5, text: "Боты", value: "4" },
+  { id: 6, text: "Комплекты", value: "5" },
 ];
 
-const filters = ["Новинки", "Скидки"];
+const filters = [
+  {
+    id: 1,
+    text: "Новинки",
+  },
+  { id: 2, text: "Скидки" },
+];
 export const Filters: React.FC<FiltersProps> = ({ className }) => {
   return (
     <div className={cn("", className)}>
@@ -41,7 +47,12 @@ export const Filters: React.FC<FiltersProps> = ({ className }) => {
       {/* Верхние фильтры */}
       <div className="flex flex-col gap-4">
         {filters.map((filter, index) => (
-          <FilterCheckbox text={filter} value={String(index)} />
+          <FilterCheckbox
+            key={filter.id}
+            id={filter.id}
+            text={filter.text}
+            value={String(index)}
+          />
         ))}
       </div>
       {/* Фильтр цен */}
