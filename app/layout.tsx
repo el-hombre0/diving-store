@@ -7,7 +7,7 @@ const noto_sans = Noto_Sans({
   subsets: ["cyrillic"],
   variable: "--font-noto_sans",
   weight: ["400", "500", "600", "700", "800", "900"],
-});
+}); 
 
 export const metadata: Metadata = {
   title: "Diving shop | Главная",
